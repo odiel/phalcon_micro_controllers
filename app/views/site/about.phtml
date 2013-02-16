@@ -1,0 +1,18 @@
+<?php use \Phalcon\Tag as Tag; ?>
+<!DOCTYPE html>
+<html>
+<head>
+<?php
+include_once('partials/general_metas.php');
+
+echo Tag::stylesheetLink(ASSETS_URL.'/css?r=pages&v=1', false);
+
+echo Tag::getTitle();
+?>
+</head>
+<body>
+
+This is about the application....
+
+</body>
+</html>
