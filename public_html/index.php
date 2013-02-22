@@ -89,14 +89,11 @@ try {
     }
 
     // Starting the application
-    $app = new Application();
+    $app = new \Classes\General\Application();
     $app->setDI($di);
     $app::$config = $config;
 
-    $requestHandler = new \Classes\General\RequestHandler($app);
-    $requestHandler->setDefaultModule('site');
-    $requestHandler->handle();
-
+    $app->setDefaultModule('site');
 
     $app->get('/', function() use ($app) {
         echo 'Im at home';
@@ -106,7 +103,7 @@ try {
         echo 'oops!!, another page missing';
 	});
 
-    $app->handle();
+    $app->start();
 
 } catch (Phalcon\Exception $e) {
     var_dump('E: '.$e);
