@@ -25,10 +25,6 @@ date_default_timezone_set($config['application']['timezone']);
 define('ASSETS_URL', $config['assets']['url']);
 define('BASE_URL', $config['application']['baseUrl']);
 
-//-
-\Phalcon\Tag::setTitle($config['application']['title']);
-
-
 
 try {
 
